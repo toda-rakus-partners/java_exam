@@ -1,0 +1,19 @@
+--通常問題用  SQL文
+DROP TABLE IF EXISTS test_members;
+CREATE TABLE test_members(
+id serial primary key,
+name text not null,
+age integer,
+dep_id integer
+);
+
+--ボーナス問題用 SQL文
+DROP TABLE IF EXISTS test_deps;
+CREATE TABLE test_deps(
+ id serial primary key,
+ name text not null
+);
+INSERT INTO test_deps(name) VALUES('HR事業部');
+INSERT INTO test_deps(name) VALUES('SOL事業部');
+INSERT INTO test_deps(name) VALUES('総務⼈事部');
+INSERT INTO test_deps(name) VALUES('経営管理室');

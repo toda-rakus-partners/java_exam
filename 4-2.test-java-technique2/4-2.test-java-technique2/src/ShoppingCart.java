@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.List;
 
-public class ShoppingCart extends LinkedList{
+public class ShoppingCart extends LinkedList<Item>{
 
     List<Item> list = null;
 
