@@ -23,7 +23,10 @@ public class Exam3 {
 			con = DriverManager.getConnection(url, user, password);
 
 			// (2)SQL文を作成
-			sql = "SELECT * FROM test_members JOIN test_deps ON id = dep_id";
+			// ONは2つのテーブルの結合部にあたるカラムを指定する
+			// 2つのカラムの値が同じレコード同士が結合される
+
+			sql = "SELECT a.id, a.name, a.age, b.name AS dep_name FROM test_members AS a INNER JOIN test_deps AS b ON b.id = a.dep_id";
 
 			// (3)SQL実行準備
 			pstmt = con.prepareStatement(sql);
@@ -39,8 +42,9 @@ public class Exam3 {
 				System.out.print("name=" + name + ",");
 				int age = rs.getInt("age");
 				System.out.print("age=" + age + ",");
-				int dep_name = rs.getInt("dep_id");
-				// System.out.println("dep_name=" + dep_id);
+				String dep_name = rs.getString("dep_name");
+				System.out.print("dep_name=" + dep_name);
+				System.out.println();
 			}
 
 		} catch (SQLException ex) {

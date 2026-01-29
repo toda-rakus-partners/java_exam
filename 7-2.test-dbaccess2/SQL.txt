@@ -1,0 +1,13 @@
+--問題用  SQL文
+DROP TABLE IF EXISTS test_members;
+
+CREATE TABLE test_members(
+id serial primary key,
+name text not null,
+age integer,
+dep_id integer
+);
+
+INSERT INTO test_members(name, age, dep_id) VALUES('イチロー', 21, 1);
+INSERT INTO test_members(name, age, dep_id) VALUES('ジロー', 32, 2);
+INSERT INTO test_members(name, age, dep_id) VALUES('サブロー', 43, 1);
