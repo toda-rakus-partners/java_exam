@@ -1,0 +1,23 @@
+ul {
+    list-style-type: none;
+}
+
+li {
+    list-style-type: none;
+    width: 120px;
+    margin: 10px;
+    background-color: red;
+}
+
+.one {
+    background-color: red;
+}
+
+.two {
+    background-color: green;
+}
+
+p {
+    width: 120px;
+    color: white;
+}
