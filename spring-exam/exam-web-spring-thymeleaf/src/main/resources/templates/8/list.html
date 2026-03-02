@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>問8</title>
+</head>
+<body>
+<section>
+	プロ野球の球団一覧があります。
+	<ol>
+		<li>問8-1.設立年月日の昇順で並べ替えてください。</li>
+		<li>問8-2.この球団一覧表に列を追加し、スタジアムを表示してください。</li>
+	</ol>
+</section>
+	<table border="1">
+	<tr>
+		<th>ID</th>
+		<th>球団名</th>
+		<th>設立年月日</th>
+	</tr>
+	<tr th:each="team:${teams}">
+		<td><span th:text="${team.id}"></span></td>
+		<td><span th:text="${team.name}"></span></td>
+		<td><span th:text="${team.establishedDate}"></span></td>
+	</tr>
+</table>
+</body>
+</html>

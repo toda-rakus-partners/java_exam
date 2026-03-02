@@ -1,0 +1,3 @@
+CREATE DATABASE examdb
+  WITH ENCODING='UTF8'
+       OWNER=postgres;
