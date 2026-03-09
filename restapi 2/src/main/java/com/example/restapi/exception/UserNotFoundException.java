@@ -1,0 +1,15 @@
+package com.example.restapi.exception;
+
+/**
+ * ユーザーが見つからない場合の例外クラス
+ */
+public class UserNotFoundException extends RuntimeException {
+    
+    public UserNotFoundException(String message) {
+        super(message);
+    }
+    
+    public UserNotFoundException(String message, Throwable cause) {
+        super(message, cause);
+    }
+}
